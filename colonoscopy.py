@@ -74,9 +74,9 @@ if uploaded_file is not None:
             def make_predict(input_df):
                 
                 # Load the trained model for predict
-                with open("XGBoost_best_model.sav", "rb") as f:
+                #with open("XGBoost_best_model.sav", "rb") as f:
                     model = pickle.load(f)
-                #model = joblib.load("E:/上中医/研0/论文写作/结直肠癌行为预测/实验更新_20250105/机器学习模型/1_机器学习模型训练/Model_Parameters/XGBoost_best_model.sav")
+                model = joblib.load("XGBoost_best_model.sav")
                 # make prediction
                 predict_result = model.predict(input_df)  # 对输入的数据进行预测
 
